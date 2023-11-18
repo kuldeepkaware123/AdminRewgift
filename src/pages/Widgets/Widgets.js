@@ -47,7 +47,7 @@ const Widgets = () => {
         */}
         <Grid item xs={12} sm={6} md={3}>
           <StatCard
-            title="Campaigns"
+            title="Coupons"
             value={103}
             icon={<LocalOfferIcon />}
             color="#3f51b5"
@@ -55,7 +55,7 @@ const Widgets = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <StatCard
-            title="Customers"
+            title="Users"
             value={230}
             icon={<PhoneIcon />}
             color="#9c27b0"
@@ -121,105 +121,18 @@ const Widgets = () => {
         {/*
           News card
         */}
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid item xs={12} sm={12} md={12}>
           <NewsCard subtitle="Last updated 24 mins ago" feed={feed} />
         </Grid>
 
-        {/*
-          Image stat card
-        */}
-        <Grid item xs={12} sm={6} md={4}>
-          <ImageStatCard
-            title="image stat card"
-            image={`${process.env.PUBLIC_URL}/static/images/unsplash/1.jpg`}
-            imageHeight={195}
-            stats={stats}
-          />
-        </Grid>
 
-        {/*
-          Profile card
-        */}
-        <Grid item xs={12} sm={6} md={4}>
-          <ProfileCard
-            name={"Michael Obrien"}
-            image={`${process.env.PUBLIC_URL}/static/images/avatar.jpg`}
-            location={"London, Uk"}
-            stats={stats}
-          />
-        </Grid>
 
-        {/*
-          Google map card
-        */}
-        <Grid item xs={12} sm={12} md={6}>
-          <MapCard
-            title="Gerald Morris"
-            subtitle="24 mins ago"
-            lat={-34.397}
-            lng={150.644}
-            mapHeight={360}
-            avatar={
-              <Avatar aria-label="Map" style={{ backgroundColor: red[500] }}>
-                R
-              </Avatar>
-            }
-          />
-        </Grid>
 
-        {/*
-          Blog Post card
-        */}
-        <Grid item sm={12} md={6}>
-          <PostCard
-            title="Shrimp and Chorizo Paella"
-            subtitle="Yesterday"
-            image={`${process.env.PUBLIC_URL}/static/images/unsplash/2.jpg`}
-            imageHeight={200}
-            text="Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp."
-            avatar={
-              <Avatar aria-label="Post" style={{ backgroundColor: red[500] }}>
-                R
-              </Avatar>
-            }
-          />
-        </Grid>
 
-        {/*
-          Weather card
-        */}
-        <Grid item sm={12} md={6}>
-          <WeatherCard city="london" country="uk" days={7} />
-        </Grid>
 
-        {/*
-          Cart card
-        */}
-        <Grid item xs={12} sm={6} md={3}>
-          <CartCard
-            title="Jacket"
-            price={83.0}
-            image={`${process.env.PUBLIC_URL}/static/images/unsplash/fashion3.jpg`}
-            imageHeight={258}
-          />
-        </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
-          <div className="overflow-hidden radius-round">
-            <GridList cellHeight={193} cols={3}>
-              {[1, 2, 3, 4, 5].map(tile => (
-                <GridListTile key={tile} cols={tile === 1 ? 2 : 1}>
-                  <img
-                    src={`${
-                      process.env.PUBLIC_URL
-                    }/static/images/unsplash/${tile + 1}.jpg`}
-                    alt={tile}
-                  />
-                </GridListTile>
-              ))}
-            </GridList>
-          </div>
-        </Grid>
+
+
       </Grid>
     </Wrapper>
   );

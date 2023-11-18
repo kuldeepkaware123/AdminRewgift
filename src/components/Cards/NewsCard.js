@@ -21,7 +21,7 @@ const NewsCard = ({ feed, subtitle }) => {
   const classes = useStyles();
   return (
     <Card>
-      <CardHeader title="Newsfeed" subheader={subtitle} />
+      <CardHeader title="All Users Details" />
       <Divider />
       <List>
         {feed.map((item, index) => (
